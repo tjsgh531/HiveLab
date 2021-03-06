@@ -1,0 +1,13 @@
+@import "./initcss.css";
+@import "./header.css";
+
+*{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-weight: 600;
+
+    background-color: black;
+}
+header,footer{
+    font-weight: 700;
+}

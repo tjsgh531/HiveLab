@@ -1,0 +1,88 @@
+
+/*header CSS*/
+header{
+    padding: 30px;
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+/*LOGO*/
+#logo{
+    flex-basis: 200px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    font-weight: 900;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+/*MENU*/
+#menu{
+    flex-basis: 400px;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    min-width: 80px;
+}
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    letter-spacing: -1px;
+}
+#menu ul li{
+    flex-basis: 70px;
+}
+
+/*RELATIVEMENU*/
+#relativeMenu{
+    flex-basis: 280px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+#relativeMenu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+#relativeMenu ul li{
+    cursor: pointer;
+}
+#relativeMenu ul :nth-child(1)::after{
+    content: "·";
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+
+}
+#relativeMenu ul :nth-child(2)::after{
+    content: "·";
+    display: inline-block;
+    width: 20px;
+    text-align: center;;
+}
+#relativeMenu ul :nth-child(3)::after{
+    content: "  |";
+    display: inline-block;
+    width: 20px;
+    font-weight: 100;
+    font-size: 1px;
+    text-align: center;
+}
+#relativeMenu ul:last-child::after{
+    content: "▼";
+    display: inline-block;
+    width:10px;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 0.1px;
+    font-weight: 100;
+}
