@@ -9,6 +9,8 @@ header{
     display: flex;
     flex-direction: row;
     align-items: baseline;
+
+    overflow: visible;
 }
 
 /*LOGO*/
@@ -65,7 +67,7 @@ header{
 
 /*RELATIVEMENU*/
 #relativeMenu{
-    flex-basis: 280px;
+    flex-basis: 250px;
     flex-shrink: 0;
     flex-grow: 0;
 
@@ -79,6 +81,7 @@ header{
 }
 #relativeMenu ul li{
     cursor: pointer;
+    position: relative;
 }
 #relativeMenu ul :nth-child(1)::after{
     content: "·";
@@ -111,4 +114,9 @@ header{
     box-sizing: border-box;
     font-size: 0.1px;
     font-weight: 100;
+}
+
+/*RelativeMenu-MouseOver*/
+#relativeMenu ul li:hover{
+    color:rgb(140, 140, 140);
 }
