@@ -109,7 +109,7 @@ header{
     text-align: center;
     cursor: auto;
 }
-#relativeMenu > ul > li:last-child::after{
+#relativeMenu > ul > li:nth-last-child(2)::after{
     content: "▼";
     display: inline-block;
     width:10px;
@@ -128,7 +128,7 @@ header{
 }
 
 #intro{
-    width: 160px;
+    width: 165px;
     position: absolute;
     top: 65px;
     right: 170px;
@@ -161,7 +161,7 @@ header{
 }
 
 #Blog{
-    width: 130px;
+    width: 125px;
     position: absolute;
     top: 65px;
     right: 125px;
