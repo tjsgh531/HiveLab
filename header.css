@@ -51,6 +51,8 @@ header{
     flex-basis: 70px;
     margin-bottom: 8px;
     cursor: pointer;
+
+    font-size: 14px;
 }
 #menuOnMouse{
     position: absolute;
@@ -74,30 +76,30 @@ header{
     font-size: 12px;
     font-weight: 900;
 }
-#relativeMenu ul{
+#relativeMenu > ul{
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
-#relativeMenu ul li{
+#relativeMenu > ul > li{
     cursor: pointer;
     position: relative;
 }
-#relativeMenu ul :nth-child(1)::after{
+#relativeMenu > ul > li:nth-child(1)::after{
     content: "·";
     display: inline-block;
     width: 20px;
     text-align: center;
     cursor: auto;
 }
-#relativeMenu ul :nth-child(2)::after{
+#relativeMenu > ul > li:nth-child(2)::after{
     content: "·";
     display: inline-block;
     width: 20px;
     text-align: center;;
     cursor: auto;
 }
-#relativeMenu ul :nth-child(3)::after{
+#relativeMenu > ul > li:nth-child(3)::after{
     content: "  |";
     display: inline-block;
     width: 20px;
@@ -106,7 +108,7 @@ header{
     text-align: center;
     cursor: auto;
 }
-#relativeMenu ul:last-child::after{
+#relativeMenu > ul > li:last-child::after{
     content: "▼";
     display: inline-block;
     width:10px;
@@ -117,6 +119,25 @@ header{
 }
 
 /*RelativeMenu-MouseOver*/
-#relativeMenu ul li:hover{
-    color:rgb(140, 140, 140);
+#relativeMenu > ul > li:hover{
+   color: rgba(255, 255, 255, 0.2);
+   
+}
+
+#intro{
+    border-top: white solid 1px;
+    width: 150px;
+    position: absolute;
+    bottom: -110px;
+    right: 180px;
+}
+#intro > ul > li{
+    background-color: rgb(20, 20, 20);
+    padding: 8px;
+
+    font-size: 8px;
+    color:  rgb(200, 200, 200);
+}
+.hide{
+    display: none;
 }

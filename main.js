@@ -1,6 +1,15 @@
 class Main{
     constructor(){
        this.menuSelect();
+       this.subMenuHide();
+    }
+    subMenuHide(){
+        $('#relativeMenu > ul > li:first-child').on('mouseover',()=>{
+            $('#intro').toggleClass('hide',false);
+        });
+        $('#relativeMenu > ul > li:first-child').on('mouseleave',()=>{
+            $('#intro').toggleClass('hide',true);
+        });
     }
 
     menuSelect(){
