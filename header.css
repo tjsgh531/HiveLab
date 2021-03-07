@@ -84,6 +84,7 @@ header{
 #relativeMenu > ul > li{
     cursor: pointer;
     position: relative;
+    padding-bottom: 20px;
 }
 #relativeMenu > ul > li:nth-child(1)::after{
     content: "·";
@@ -92,14 +93,14 @@ header{
     text-align: center;
     cursor: auto;
 }
-#relativeMenu > ul > li:nth-child(2)::after{
+#relativeMenu > ul > li:nth-child(3)::after{
     content: "·";
     display: inline-block;
     width: 20px;
     text-align: center;;
     cursor: auto;
 }
-#relativeMenu > ul > li:nth-child(3)::after{
+#relativeMenu > ul > li:nth-child(5)::after{
     content: "  |";
     display: inline-block;
     width: 20px;
@@ -117,27 +118,104 @@ header{
     font-size: 0.1px;
     font-weight: 100;
 }
+#relativeMenu > ul > li:hover{
+    color: rgba(255, 255, 255, 0.2);
+}
 
 /*RelativeMenu-MouseOver*/
-#relativeMenu > ul > li:hover{
+.mouseOverRM{
    color: rgba(255, 255, 255, 0.2);
-   
 }
 
 #intro{
-    border-top: white solid 1px;
-    width: 150px;
+    width: 160px;
     position: absolute;
-    bottom: -110px;
-    right: 180px;
+    top: 65px;
+    right: 170px;
+
+    z-index: 10;
+}
+#intro > ul > li:first-child{
+    border-top: white solid 1px;
+    padding-top: 16px;
+}
+#intro > ul > li:last-child{
+    padding-bottom: 16px;
 }
 #intro > ul > li{
     background-color: rgb(20, 20, 20);
     padding: 8px;
 
-    font-size: 8px;
-    color:  rgb(200, 200, 200);
+    font-size: 12px;
+    font-weight: 400;
+    color:  rgb(158, 158, 158);
+
+    cursor: pointer;
+}
+#intro > ul > li:hover{
+    color : white;
+    font-weight: 800;
 }
 .hide{
     display: none;
+}
+
+#Blog{
+    width: 130px;
+    position: absolute;
+    top: 65px;
+    right: 125px;
+
+    z-index: 10;
+}
+#Blog > ul > li:first-child{
+    border-top: white solid 1px;
+    padding-top: 16px;
+}
+#Blog > ul > li:last-child{
+    padding-bottom: 16px;
+}
+#Blog > ul > li{
+    background-color: rgb(20, 20, 20);
+    padding: 8px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color:  rgb(158, 158, 158);
+
+    cursor: pointer;
+}
+#Blog > ul > li:hover{
+    color : white;
+    font-weight: 800;
+}
+
+#lang{
+    width: 80px;
+    position: absolute;
+    top: 65px;
+    right: 22px;
+
+    z-index: 10;
+}
+#lang > ul > li:first-child{
+    border-top: white solid 1px;
+    padding-top: 16px;
+}
+#lang > ul > li:last-child{
+    padding-bottom: 16px;
+}
+#lang > ul > li{
+    background-color: rgb(20, 20, 20);
+    padding: 8px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color:  rgb(158, 158, 158);
+
+    cursor: pointer;
+}
+#lang > ul > li:hover{
+    color : white;
+    font-weight: 800;
 }

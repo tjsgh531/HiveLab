@@ -1,14 +1,27 @@
 class Main{
     constructor(){
        this.menuSelect();
-       this.subMenuHide();
+       this.subMenuHide($('#relativeMenu > ul > li:nth-child(1)'),$('#intro'));
+       this.subMenuHide($('#relativeMenu > ul > li:nth-child(3)'),$('#Blog')); 
+       this.subMenuHide($('#relativeMenu > ul > li:nth-child(6)'),$('#lang')); 
     }
-    subMenuHide(){
-        $('#relativeMenu > ul > li:first-child').on('mouseover',()=>{
-            $('#intro').toggleClass('hide',false);
+    subMenuHide(target, subBox){
+        target.on('mouseover',()=>{
+            subBox.toggleClass('hide',false);
+            target.toggleClass('mouseOverRM',true);
         });
-        $('#relativeMenu > ul > li:first-child').on('mouseleave',()=>{
-            $('#intro').toggleClass('hide',true);
+        target.on('mouseleave',()=>{
+            subBox.toggleClass('hide',true);
+            target.toggleClass('mouseOverRM',false);
+        });
+
+        subBox.on('mouseover',()=>{
+            subBox.toggleClass('hide',false);
+            target.toggleClass('mouseOverRM',true);
+        })
+        subBox.on('mouseleave',()=>{
+            subBox.toggleClass('hide',true);
+            target.toggleClass('mouseOverRM',false);
         });
     }
 
